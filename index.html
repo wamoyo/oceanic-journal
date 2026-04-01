@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Uncontacted Tribe Documented Free Diving Beyond 100 Meters — National Oceanic Journal</title>
+  <meta name="description" content="Researchers document an uncontacted coastal tribe in the Solomon Islands routinely free diving to depths previously thought impossible without equipment.">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      color: #1a1a1a;
+      background: #f9f7f4;
+      line-height: 1.8;
+    }
+
+    /* -- Top bar -- */
+    .topbar {
+      background: #0b1e3d;
+      color: #c9d6e3;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 0.75rem;
+      padding: 6px 20px;
+      display: flex;
+      justify-content: space-between;
+      letter-spacing: 0.5px;
+    }
+
+    /* -- Header -- */
+    header {
+      border-bottom: 3px solid #0b1e3d;
+      padding: 18px 20px 14px;
+      text-align: center;
+    }
+    header .logo {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #0b1e3d;
+    }
+    header .logo span { color: #1a6fbf; }
+    header .tagline {
+      font-size: 0.7rem;
+      color: #888;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-top: 2px;
+    }
+
+    /* -- Nav -- */
+    nav {
+      background: #0f2744;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      gap: 28px;
+      padding: 10px 0;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    nav a { color: #b0c6db; text-decoration: none; }
+    nav a:hover { color: #fff; }
+
+    /* -- Article -- */
+    .article-container {
+      max-width: 740px;
+      margin: 0 auto;
+      padding: 40px 20px 80px;
+    }
+
+    .category {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #1a6fbf;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-size: 2.4rem;
+      line-height: 1.2;
+      margin-bottom: 16px;
+      color: #111;
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+      color: #555;
+      margin-bottom: 24px;
+      font-style: italic;
+      line-height: 1.5;
+    }
+
+    .byline {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 0.8rem;
+      color: #888;
+      margin-bottom: 30px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #ddd;
+    }
+    .byline strong { color: #333; }
+
+    .article-body p {
+      margin-bottom: 22px;
+      font-size: 1.1rem;
+    }
+
+    .article-body blockquote {
+      border-left: 3px solid #1a6fbf;
+      margin: 30px 0;
+      padding: 12px 24px;
+      font-style: italic;
+      color: #444;
+      background: #f0f4f8;
+    }
+
+    /* -- Video player -- */
+    .video-wrapper {
+      margin: 36px 0;
+      position: relative;
+      background: #000;
+      border-radius: 4px;
+      overflow: hidden;
+      cursor: pointer;
+      aspect-ratio: 16 / 9;
+    }
+
+    .video-wrapper .poster {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      filter: brightness(0.7);
+    }
+
+    .video-overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 2;
+    }
+
+    .play-btn {
+      width: 72px;
+      height: 72px;
+      background: rgba(255,255,255,0.9);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.2s;
+    }
+    .video-wrapper:hover .play-btn { transform: scale(1.1); }
+    .play-btn svg { margin-left: 4px; }
+
+    .video-label {
+      margin-top: 12px;
+      color: #fff;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-shadow: 0 1px 4px rgba(0,0,0,0.7);
+    }
+    .video-caption {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 0.75rem;
+      color: #888;
+      margin-top: 8px;
+      font-style: italic;
+    }
+
+    .video-wrapper iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* -- Pull quote -- */
+    .pull-quote {
+      text-align: center;
+      font-size: 1.5rem;
+      color: #0f2744;
+      margin: 40px 0;
+      padding: 20px 40px;
+      border-top: 2px solid #ddd;
+      border-bottom: 2px solid #ddd;
+      line-height: 1.5;
+    }
+
+    /* -- Related -- */
+    .related {
+      margin-top: 50px;
+      padding-top: 24px;
+      border-top: 1px solid #ddd;
+    }
+    .related h3 {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #999;
+      margin-bottom: 14px;
+    }
+    .related a {
+      display: block;
+      color: #1a6fbf;
+      margin-bottom: 8px;
+      font-size: 1rem;
+      text-decoration: none;
+    }
+    .related a:hover { text-decoration: underline; }
+
+    /* -- Footer -- */
+    footer {
+      background: #0b1e3d;
+      color: #7a8fa6;
+      text-align: center;
+      padding: 30px 20px;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 0.75rem;
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 1.7rem; }
+      .subtitle { font-size: 1rem; }
+      .pull-quote { font-size: 1.2rem; padding: 16px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="topbar">
+    <span>April 1, 2026</span>
+    <span>National Oceanic Journal — Marine Science &amp; Discovery</span>
+  </div>
+
+  <header>
+    <div class="logo">National <span>Oceanic</span> Journal</div>
+    <div class="tagline">Independent Reporting on Marine Science &amp; Exploration</div>
+  </header>
+
+  <nav>
+    <a href="#">Marine Biology</a>
+    <a href="#">Deep Sea</a>
+    <a href="#">Expeditions</a>
+    <a href="#">Climate</a>
+    <a href="#">Human Performance</a>
+  </nav>
+
+  <div class="article-container">
+    <div class="category">Exclusive Investigation / Human Performance</div>
+
+    <h1>Uncontacted Coastal Tribe Documented Free Diving Beyond 100 Meters on a Single Breath</h1>
+
+    <div class="subtitle">
+      A joint research team from the University of Copenhagen and the Solomon Islands National University
+      claims to have observed members of a previously undocumented tribe routinely descending to depths
+      that rival competitive world records — without any equipment or training.
+    </div>
+
+    <div class="byline">
+      By <strong>Dr. Lena Haraldsen</strong> &amp; <strong>Marco Vitiello</strong> &nbsp;|&nbsp;
+      Published April 1, 2026 &nbsp;|&nbsp; 8 min read
+    </div>
+
+    <div class="article-body">
+      <p>
+        In a discovery that is generating intense discussion in the freediving community and dive
+        physiology research, a team of scientists working off the coast of a remote outer island
+        in the Western Solomon Islands has released preliminary findings suggesting that members
+        of a small, previously undocumented coastal tribe are capable of unassisted breath-hold
+        dives consistently exceeding 100 meters.
+      </p>
+
+      <p>
+        For context, the current official world record for constant weight freediving — the
+        discipline in which a diver descends and ascends under their own power on a single breath
+        — stands at 136 meters, set by Alexey Molchanov in 2024. That mark was achieved by an
+        elite athlete with decades of training, medical support teams, and carefully controlled
+        conditions. What makes this finding remarkable is not the absolute depth, but that
+        multiple individuals appear to be reaching these depths casually, as part of daily
+        subsistence foraging, with no equipment whatsoever.
+      </p>
+
+      <blockquote>
+        "We calibrated the sonar three times because the readings seemed too consistent. Multiple
+        individuals, multiple days, all reaching between 95 and 110 meters. These aren't
+        competitive dives — they're grocery runs."
+        <br><br>
+        — Dr. Tomas Rennell, Solomon Islands National University, Marine Sciences
+      </blockquote>
+
+      <p>
+        The team, led by marine anthropologist Dr. Lena Haraldsen of the University of Copenhagen,
+        initially traveled to the region to study the diving practices of Melanesian coastal
+        communities, who have long been known for impressive breath-hold capabilities. But
+        fishermen in Gizo spoke of another group — smaller, more reclusive — living on a
+        cluster of outer reef islands near the New Georgia Sound with virtually no contact
+        with modern populations.
+      </p>
+
+      <p>
+        After weeks of careful, non-invasive observation from a research vessel anchored at a
+        respectful distance, the team documented what they describe as "routine deep foraging dives"
+        in which individuals — including adolescents — would descend along steep reef walls into
+        the deep channels between islands and return with deep-water species typically found
+        at 80 to 100 meters, including several species of snapper and grouper associated
+        exclusively with mesophotic reef zones.
+      </p>
+
+      <div class="video-wrapper" id="videoPlayer" onclick="playVideo()">
+        <!-- Deep blue underwater image generated via CSS gradient as poster -->
+        <canvas class="poster" id="posterCanvas"></canvas>
+        <div class="video-overlay" id="videoOverlay">
+          <div class="play-btn">
+            <svg width="28" height="32" viewBox="0 0 28 32" fill="none">
+              <path d="M2 1.5L26 16L2 30.5V1.5Z" fill="#0b1e3d" stroke="#0b1e3d" stroke-width="2"/>
+            </svg>
+          </div>
+          <div class="video-label">&#9654; Watch: Expedition Footage — First Contact Dive Observation</div>
+        </div>
+      </div>
+      <div class="video-caption">
+        Video: Unedited sonar-synced footage from the research vessel <em>Pelagic Dawn</em>,
+        captured February 2026. Courtesy University of Copenhagen Marine Anthropology Division.
+      </div>
+
+      <p>
+        The physiological implications are significant. At 100 meters, hydrostatic pressure compresses
+        the lungs to roughly one-eleventh of their surface volume. The risk of nitrogen narcosis,
+        hypoxic blackout, and pulmonary barotrauma is serious even for trained athletes with safety
+        teams. Yet the observed divers appeared to surface without visible distress, often
+        re-submerging within minutes for additional dives.
+      </p>
+
+      <div class="pull-quote">
+        "They treat 80 meters the way most recreational divers treat 10. There is clearly something
+        remarkable about their adaptation — whether it's physiological, behavioral, or both."
+      </div>
+
+      <p>
+        Dr. Haraldsen's team hypothesizes several possible explanations, though all remain speculative
+        at this stage. Genetic adaptation is one avenue — the Bajau people of Southeast Asia, for
+        example, have been shown to possess enlarged spleens, which allow them to store more
+        oxygenated red blood cells. A similar but potentially more pronounced adaptation could exist
+        in a population with an even longer and more exclusive lineage of deep diving in the
+        nutrient-rich channels of the Solomon Sea.
+      </p>
+
+      <p>
+        Another possibility involves what the team has termed "respiratory entrainment" — a pattern
+        of pre-dive breathing unlike any previously documented technique. Observers noted that divers
+        would enter a still, almost meditative state for several minutes before submerging, during
+        which their breathing rate appeared to slow dramatically. Whether this represents a form of
+        oxygen loading, a vagal response trigger, or something else entirely remains unclear.
+      </p>
+
+      <blockquote>
+        "We saw things in the field that challenge fundamental assumptions in dive physiology. I
+        understand skepticism — I would be skeptical too. That is exactly why we need to go back
+        with better equipment and a larger team."
+        <br><br>
+        — Dr. Lena Haraldsen, University of Copenhagen
+      </blockquote>
+
+      <p>
+        The findings have been met with intense interest but also caution from the broader scientific
+        community. Dr. William Trubridge, a former world record holder and one of the most respected
+        voices in competitive freediving, noted that depth verification in open-water observation
+        is notoriously difficult and that extraordinary claims require extraordinary evidence.
+      </p>
+
+      <p>
+        Still, Trubridge added that "the history of human performance is a history of broken
+        assumptions," pointing to his own discipline's trajectory from 100-meter dives being
+        considered physiologically impossible to now being surpassed by multiple athletes.
+      </p>
+
+      <p>
+        The Indonesian government has classified the tribe's location as a protected zone, and the
+        research team has committed to a strict non-contact protocol. A follow-up expedition is
+        planned for late 2026, pending ethics review and funding approval, with the goal of deploying
+        deep-rated camera systems and wearable sonar tags that could be left at dive entry points.
+      </p>
+
+      <p>
+        A peer-reviewed paper is expected to be submitted to the <em>Journal of Applied Physiology</em>
+        by the end of this quarter. Until then, the team has released only the sonar data and limited
+        surface-level footage — the latter of which is available above.
+      </p>
+
+      <p>
+        Whether this discovery represents a genuine rewriting of human physiological limits or a
+        case of observational error that unravels under scrutiny, the freediving world is watching
+        closely. And for now, somewhere on a nameless island in the Banda Sea, the deepest divers
+        on Earth may have no idea that anyone is paying attention at all.
+      </p>
+    </div>
+
+    <div class="related">
+      <h3>Related Articles</h3>
+      <a href="#">The Bajau: How "Sea Nomads" Evolved for a Life Underwater</a>
+      <a href="#">Alexey Molchanov Sets New Constant Weight Record at 136m in Dahab</a>
+      <a href="#">Deep Diving Physiology: What Happens to the Human Body Past 100 Meters</a>
+      <a href="#">Indonesia Creates New Marine Protected Zones Across Eastern Archipelago</a>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2026 National Oceanic Journal. All rights reserved. &nbsp;|&nbsp; ISSN 2891-4037 &nbsp;|&nbsp; Editorial inquiries: editors@natoceanicjournal.org
+  </footer>
+
+  <script>
+    // Draw a convincing deep-ocean poster frame on the canvas
+    function drawPoster () {
+      var canvas = document.getElementById("posterCanvas")
+      var ctx = canvas.getContext("2d")
+      canvas.width = canvas.offsetWidth * 2
+      canvas.height = canvas.offsetHeight * 2
+      ctx.scale(2, 2)
+      var w = canvas.offsetWidth
+      var h = canvas.offsetHeight
+
+      // Deep blue gradient
+      var grad = ctx.createLinearGradient(0, 0, 0, h)
+      grad.addColorStop(0, "#0a3d6b")
+      grad.addColorStop(0.5, "#062a4a")
+      grad.addColorStop(1, "#01111f")
+      ctx.fillStyle = grad
+      ctx.fillRect(0, 0, w, h)
+
+      // Subtle light rays from top
+      ctx.save()
+      ctx.globalAlpha = 0.06
+      for (let i = 0; i < 8; i++) {
+        ctx.beginPath()
+        var x = w * 0.3 + i * w * 0.06
+        ctx.moveTo(x, 0)
+        ctx.lineTo(x - 30, h)
+        ctx.lineTo(x + 20, h)
+        ctx.closePath()
+        ctx.fillStyle = "#4a9fd4"
+        ctx.fill()
+      }
+      ctx.restore()
+
+      // Particles / bubbles
+      ctx.globalAlpha = 0.15
+      for (let i = 0; i < 40; i++) {
+        var bx = Math.random() * w
+        var by = Math.random() * h
+        var br = Math.random() * 2 + 0.5
+        ctx.beginPath()
+        ctx.arc(bx, by, br, 0, Math.PI * 2)
+        ctx.fillStyle = "#5cb8e8"
+        ctx.fill()
+      }
+      ctx.globalAlpha = 1
+
+      // Sonar overlay text
+      ctx.font = "11px monospace"
+      ctx.fillStyle = "rgba(100, 200, 255, 0.4)"
+      ctx.fillText("RV PELAGIC DAWN — SONAR SYNC — 02.14.2026 — 09:42:17 UTC", 12, 20)
+      ctx.fillText("DEPTH TRACK: SUBJECT 3 — 147.2m — BREATH-HOLD CONFIRMED", 12, h - 14)
+
+      // Depth scale on the right
+      ctx.fillStyle = "rgba(100, 200, 255, 0.25)"
+      ctx.font = "9px monospace"
+      for (let d = 0; d <= 5; d++) {
+        var dy = 30 + d * ((h - 60) / 5)
+        ctx.fillText((d * 30) + "m", w - 36, dy + 3)
+        ctx.fillRect(w - 44, dy, 4, 1)
+      }
+    }
+
+    drawPoster()
+    window.addEventListener("resize", drawPoster)
+
+    // Replace poster with Rick Roll on click
+    function playVideo () {
+      var wrapper = document.getElementById("videoPlayer")
+      var overlay = document.getElementById("videoOverlay")
+      var canvas = document.getElementById("posterCanvas")
+      overlay.style.display = "none"
+      canvas.style.display = "none"
+      var iframe = document.createElement("iframe")
+      iframe.src = "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&controls=0&modestbranding=1&rel=0&showinfo=0"
+      iframe.allow = "autoplay; encrypted-media"
+      iframe.allowFullscreen = true
+      wrapper.appendChild(iframe)
+      wrapper.style.cursor = "default"
+      wrapper.onclick = null
+    }
+  </script>
+
+</body>
+</html>
