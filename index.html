@@ -233,10 +233,195 @@
       font-size: 0.75rem;
     }
 
+    /* -- Inline ad -- */
+    .inline-ad {
+      margin: 36px 0;
+      text-align: center;
+    }
+    .ad-label {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 0.6rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #bbb;
+      margin-bottom: 6px;
+    }
+    .ad-box {
+      border: 1px solid #e0e0e0;
+      background: #f4f6f8;
+      padding: 24px 20px;
+      border-radius: 3px;
+    }
+    .ad-content {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 0.9rem;
+      color: #555;
+      line-height: 1.6;
+    }
+    .ad-cta {
+      color: #1a6fbf;
+      font-weight: 600;
+      font-size: 0.85rem;
+    }
+
+    /* -- Share bar -- */
+    .share-bar {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 0;
+      border-top: 1px solid #e0e0e0;
+      border-bottom: 1px solid #e0e0e0;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+    }
+    .share-label {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #999;
+    }
+    .share-buttons { display: flex; gap: 8px; }
+    .share-btn {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 0.7rem;
+      padding: 6px 14px;
+      border-radius: 3px;
+      text-decoration: none;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .share-fb { background: #3b5998; }
+    .share-tw { background: #1a1a1a; }
+    .share-li { background: #0077b5; }
+    .share-em { background: #777; }
+
+    /* -- Newsletter -- */
+    .newsletter {
+      background: #f0f4f8;
+      border: 1px solid #d8e2ec;
+      border-radius: 4px;
+      padding: 28px 24px;
+      margin-top: 40px;
+      text-align: center;
+    }
+    .newsletter h3 {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 1rem;
+      margin-bottom: 6px;
+      color: #0f2744;
+    }
+    .newsletter p {
+      font-size: 0.9rem;
+      color: #666;
+      margin-bottom: 14px;
+    }
+    .newsletter-form {
+      display: flex;
+      gap: 8px;
+      max-width: 380px;
+      margin: 0 auto;
+    }
+    .newsletter-form input {
+      flex: 1;
+      padding: 10px 14px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      font-size: 0.85rem;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+    }
+    .newsletter-form button {
+      padding: 10px 20px;
+      background: #0f2744;
+      color: #fff;
+      border: none;
+      border-radius: 3px;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 0.85rem;
+      cursor: pointer;
+    }
+    .newsletter-note {
+      display: block;
+      margin-top: 8px;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 0.65rem;
+      color: #999;
+    }
+    .newsletter-note a { color: #1a6fbf; }
+
+    /* -- Trending sidebar -- */
+    .trending-sidebar {
+      position: fixed;
+      right: 20px;
+      top: 180px;
+      width: 200px;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 0.75rem;
+      color: #666;
+    }
+    .trending-sidebar h4 {
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #999;
+      margin-bottom: 10px;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 6px;
+    }
+    .trending-sidebar ol {
+      padding-left: 18px;
+      line-height: 1.6;
+    }
+    .trending-sidebar li { margin-bottom: 8px; }
+    .trending-sidebar a { color: #1a6fbf; text-decoration: none; }
+    .trending-sidebar a:hover { text-decoration: underline; }
+
+    /* -- Cookie banner -- */
+    .cookie-banner {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #1a1a1a;
+      color: #ccc;
+      padding: 14px 24px;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 0.78rem;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      z-index: 1000;
+      flex-wrap: wrap;
+    }
+    .cookie-banner p { flex: 1; margin: 0; min-width: 200px; }
+    .cookie-banner a { color: #6db3f2; }
+    .cookie-banner button {
+      padding: 8px 20px;
+      background: #1a6fbf;
+      color: #fff;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      font-size: 0.78rem;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+    }
+    .cookie-banner .cookie-manage {
+      background: transparent;
+      border: 1px solid #666;
+      color: #aaa;
+    }
+
+    @media (max-width: 1100px) {
+      .trending-sidebar { display: none; }
+    }
+
     @media (max-width: 600px) {
       h1 { font-size: 1.7rem; }
       .subtitle { font-size: 1rem; }
       .pull-quote { font-size: 1.2rem; padding: 16px 20px; }
+      .cookie-banner { flex-direction: column; text-align: center; }
     }
   </style>
 </head>
@@ -390,10 +575,11 @@
       </p>
 
       <p>
-        The Indonesian government has classified the tribe's location as a protected zone, and the
-        research team has committed to a strict non-contact protocol. A follow-up expedition is
-        planned for late 2026, pending ethics review and funding approval, with the goal of deploying
-        deep-rated camera systems and wearable sonar tags that could be left at dive entry points.
+        The Solomon Islands Ministry of Environment has designated the tribe's island cluster as
+        a temporary protected zone, and the research team has committed to a strict non-contact
+        observation protocol. A follow-up expedition is planned for late 2026, pending ethics
+        review and funding approval, with the goal of deploying deep-rated camera systems and
+        wearable sonar tags that could be left at dive entry points.
       </p>
 
       <p>
@@ -405,9 +591,32 @@
       <p>
         Whether this discovery represents a genuine rewriting of human physiological limits or a
         case of observational error that unravels under scrutiny, the freediving world is watching
-        closely. And for now, somewhere on a nameless island in the Banda Sea, the deepest divers
+        closely. And for now, somewhere on a nameless island in the Solomon Sea, the deepest divers
         on Earth may have no idea that anyone is paying attention at all.
       </p>
+    </div>
+
+    <!-- Inline ad -->
+    <div class="inline-ad">
+      <div class="ad-label">Advertisement</div>
+      <div class="ad-box">
+        <div class="ad-content">
+          <strong>Suunto D6i Novo</strong><br>
+          The dive computer trusted by professionals.<br>
+          <span class="ad-cta">Shop Now &rarr;</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Share bar -->
+    <div class="share-bar">
+      <span class="share-label">Share this article</span>
+      <div class="share-buttons">
+        <a href="#" class="share-btn share-fb">Facebook</a>
+        <a href="#" class="share-btn share-tw">X / Twitter</a>
+        <a href="#" class="share-btn share-li">LinkedIn</a>
+        <a href="#" class="share-btn share-em">Email</a>
+      </div>
     </div>
 
     <div class="related">
@@ -415,8 +624,38 @@
       <a href="#">The Bajau: How "Sea Nomads" Evolved for a Life Underwater</a>
       <a href="#">Alexey Molchanov Sets New Constant Weight Record at 136m in Dahab</a>
       <a href="#">Deep Diving Physiology: What Happens to the Human Body Past 100 Meters</a>
-      <a href="#">Indonesia Creates New Marine Protected Zones Across Eastern Archipelago</a>
+      <a href="#">Solomon Islands Expands Marine Protected Zones Across Western Province</a>
     </div>
+
+    <!-- Newsletter signup -->
+    <div class="newsletter">
+      <h3>Stay informed</h3>
+      <p>Get weekly deep dives (pun intended) on marine science and human performance.</p>
+      <div class="newsletter-form">
+        <input type="email" placeholder="your@email.com" readonly>
+        <button type="button">Subscribe</button>
+      </div>
+      <span class="newsletter-note">No spam. Unsubscribe anytime. Read our <a href="#">Privacy Policy</a>.</span>
+    </div>
+  </div>
+
+  <!-- Trending sidebar (desktop only) -->
+  <aside class="trending-sidebar">
+    <h4>Trending</h4>
+    <ol>
+      <li><a href="#">Deep-sea mining moratorium gains support at UN session</a></li>
+      <li><a href="#">NOAA confirms high coral bleaching across Pacific</a></li>
+      <li><a href="#">New species of bioluminescent jellyfish found in Mariana Trench</a></li>
+      <li><a href="#">Interview: What freediving taught me about fear</a></li>
+    </ol>
+  </aside>
+
+  <!-- Cookie consent banner -->
+  <div class="cookie-banner" id="cookieBanner">
+    <p>We use cookies to improve your experience and analyze site traffic. By continuing to browse, you agree to our
+      <a href="#">Cookie Policy</a>.</p>
+    <button onclick="document.getElementById('cookieBanner').style.display='none'">Accept</button>
+    <button onclick="document.getElementById('cookieBanner').style.display='none'" class="cookie-manage">Manage Preferences</button>
   </div>
 
   <footer>
@@ -474,7 +713,7 @@
       ctx.font = "11px monospace"
       ctx.fillStyle = "rgba(100, 200, 255, 0.4)"
       ctx.fillText("RV PELAGIC DAWN — SONAR SYNC — 02.14.2026 — 09:42:17 UTC", 12, 20)
-      ctx.fillText("DEPTH TRACK: SUBJECT 3 — 147.2m — BREATH-HOLD CONFIRMED", 12, h - 14)
+      ctx.fillText("DEPTH TRACK: SUBJECT 3 — 103.7m — BREATH-HOLD CONFIRMED", 12, h - 14)
 
       // Depth scale on the right
       ctx.fillStyle = "rgba(100, 200, 255, 0.25)"
